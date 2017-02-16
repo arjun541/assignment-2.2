@@ -1,0 +1,25 @@
+
+Step 1 : creating file and adding the text in local
+
+[acadgild@localhost] $ vi max-temp.txt
+
+10-02-2017 22
+11-02-2017 23
+12-02-2017 24
+13-02-2017 13
+14-02-2017 25
+15-02-2017 23
+16-02-2017 24
+17-02-2017 23
+18-02-2017 33
+19-02-2017 19
+
+
+Step 2 : moving file from local 
+
+[acadgild@localhost] $ hadoop fs -copyFromLocal max-temp.txt /user/acadgild/hadoop 
+
+
+Step 3 : changing the file access permisions giving all rights to owner and group by restricting others to access the file
+
+[acadgild@localhost] $ hadoop fs -chmod 770 /user/acadgild/hadoop/max-temp.txt
